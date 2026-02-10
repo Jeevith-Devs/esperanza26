@@ -305,8 +305,10 @@ export default function EventsPage() {
               <div className="mt-6">
                 <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" />
                 <div className="px-6 sm:px-8 pb-6 sm:pb-8 pt-2">
-                  <button
-                    onClick={() => setSelectedEvent(null)}
+                  <a
+                    href="https://forms.gle/6fiZ2b79zr75AWBz8"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full group relative flex items-center justify-between rounded-xl p-4 bg-zinc-800 hover:bg-zinc-800/80 transition-all duration-300 overflow-hidden cursor-pointer"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A855F7]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -317,7 +319,7 @@ export default function EventsPage() {
                       Register Now
                     </span>
                     <ArrowRight className="h-5 w-5 text-zinc-400 group-hover:text-[#A855F7] transition-colors relative z-10" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

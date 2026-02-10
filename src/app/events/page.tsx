@@ -203,7 +203,7 @@ export default function EventsPage() {
         <div className="relative inline-block group">
           {/* Main Button Container */}
           <a
-            href="#"
+            href="/esperanza2k26.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="relative px-6 py-3 md:px-12 md:py-5 rounded-full block overflow-hidden transform hover:scale-[1.02] transition-transform duration-300"

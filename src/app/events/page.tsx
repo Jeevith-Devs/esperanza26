@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, Music, Film, Camera, Mic, Mic2, ArrowRight, Download, Phone, CreditCard } from "lucide-react";
+import { Star, Music, Film, Camera, Mic, Mic2, ArrowRight, Download, Phone, CreditCard, Ticket } from "lucide-react";
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Header from "@/components/sections/header";
@@ -26,6 +26,7 @@ const eventCards = [
       "Props allowed.",
       "Judging based on coordination & energy.",
     ],
+    entryFee: "₹300 + 18% (GST) = ₹354",
     contact: "JERVIN J.V- 7418907836",
   },
   {
@@ -42,6 +43,7 @@ const eventCards = [
       "Costumes must be appropriate.",
       "Report 30 minutes before your slot.",
     ],
+    entryFee: "₹100 + 18% (GST) = ₹118",
     contact: "JERVIN J.V- 7418907836",
   },
   {
@@ -58,6 +60,7 @@ const eventCards = [
       "No offensive lyrics.",
       "Judging based on harmony & coordination.",
     ],
+    entryFee: "₹300 + 18% (GST) = ₹354",
     contact: "DARSHAN S - 8637466016",
   },
   {
@@ -74,6 +77,7 @@ const eventCards = [
       "Offensive lyrics prohibited.",
       "Judging based on pitch & clarity.",
     ],
+    entryFee: "₹100 + 18% (GST) = ₹118",
     contact: "DARSHAN S - 8637466016",
   },
   {
@@ -90,6 +94,7 @@ const eventCards = [
       "Film must be original & copyright-free.",
       "Upload to Drive and bring a pendrive copy.",
     ],
+    entryFee: "₹300 + 18% (GST) = ₹354",
     contact: "SAI SANTHOSH P - 8072152950",
   },
   {
@@ -105,6 +110,7 @@ const eventCards = [
       "Submit background music in advance.",
       "Teams must justify concept to judges.",
     ],
+    entryFee: "₹300 + 18% (GST) = ₹354",
     contact: "Silviya E - 9361847450",
   },
 ];
@@ -117,6 +123,7 @@ interface Event {
   desc: string;
   rules: string[];
   contact: string;
+  entryFee?: string;
   videoSrc?: string;
 }
 
@@ -171,7 +178,7 @@ export default function EventsPage() {
                 title={event.title}
                 subtitle={event.category}
                 description={event.desc}
-                features={event.rules.slice(0, 4)}
+                features={event.title === "The Walk of Fame" ? event.rules.slice(0, 3) : event.rules.slice(0, 4)}
                 actionLabel="View More"
                 onAction={() => setSelectedEvent(event)}
                 videoSrc={event.videoSrc}
@@ -278,8 +285,8 @@ export default function EventsPage() {
                   ))}
                 </ul>
 
-                {/* Contact Card */}
-                <div className="mt-2 flex items-center gap-3 text-zinc-400 text-xs sm:text-sm p-4 bg-zinc-900/30 rounded-xl border-2 border-white/5">
+                {/* Contact Card (Coordinator) */}
+                <div className="mt-2 mb-4 flex items-center gap-3 text-zinc-400 text-xs sm:text-sm p-4 bg-zinc-900/30 rounded-xl border-2 border-white/5">
                   <div className="bg-[#A855F7]/10 p-2 rounded-lg">
                     <Phone className="h-4 w-4 text-[#A855F7]" />
                   </div>
@@ -289,8 +296,21 @@ export default function EventsPage() {
                   </div>
                 </div>
 
+                {/* Registration Fee Card */}
+                {selectedEvent.entryFee && (
+                  <div className="mb-4 flex items-center gap-3 text-zinc-400 text-xs sm:text-sm p-4 bg-zinc-900/30 rounded-xl border-2 border-white/5">
+                    <div className="bg-[#A855F7]/10 p-2 rounded-lg">
+                      <Ticket className="h-4 w-4 text-[#A855F7]" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-bold font-bricolage">Registration Fee</span>
+                      <span className="font-bold text-zinc-200">{selectedEvent.entryFee}</span>
+                    </div>
+                  </div>
+                )}
+
                 {/* Payment Details Card */}
-                <div className="mt-4 mb-6 p-4 sm:p-5 bg-zinc-900/40 rounded-xl border-2 border-white/10 space-y-4">
+                <div className="mb-6 p-4 sm:p-5 bg-zinc-900/40 rounded-xl border-2 border-white/10 space-y-4">
                   <div className="flex items-center gap-3 text-zinc-400 text-xs sm:text-sm uppercase tracking-[0.2em] font-black font-bricolage">
                     <CreditCard className="h-4 w-4 sm:h-5 sm:w-5 text-[#A855F7]" />
                     <span>Payment Details</span>

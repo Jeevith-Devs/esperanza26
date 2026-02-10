@@ -3,6 +3,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 
+import { ArrowUp } from 'lucide-react';
+
 const Footer = ({ onBackToTop }: { onBackToTop?: () => void }) => {
   const footerRef = useRef(null);
   const isInView = useInView(footerRef, { once: true, amount: 0.2 });

@@ -8,12 +8,12 @@ const faqItems = [
     {
         id: 'item-1',
         question: 'What is Esperanza 2k26?',
-        answer: "VTMT's annual cultural festival on March 6th, 2026, featuring dance, music, photography, film, and fashion events.",
+        answer: "VTMT's annual cultural festival on March 6th, 2026, featuring dance, music, film, and fashion events.",
     },
     {
         id: 'item-2',
         question: 'What events are available?',
-        answer: "7 events - Solo/Group Dance, Solo/Group Singing, Photography, Short Film, and Ramp Walk.",
+        answer: "6 events - Solo/Group Dance, Solo/Group Singing, Short Film, and Ramp Walk.",
     },
     {
         id: 'item-3',
@@ -112,7 +112,7 @@ export default function FAQs() {
                                         }}
                                         className="overflow-hidden">
                                         <div className="pt-1 sm:pt-1.5 md:pt-2">
-                                            <p className="text-white/60 pb-2 sm:pb-2.5 md:pb-3 text-sm sm:text-base md:text-lg leading-relaxed font-poppins">
+                                            <p className="text-white/60 pb-2 sm:pb-2.5 md:pb-3 text-sm sm:text-base md:text-lg leading-relaxed font-bricolage font-normal">
                                                 {item.answer}
                                             </p>
                                         </div>

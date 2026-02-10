@@ -51,7 +51,7 @@ const TeaserVideo = () => {
             disablePictureInPicture
             onContextMenu={(e) => e.preventDefault()}
           >
-            <source src="/videos/Esperanza%20Loading%20Video.mp4" type="video/mp4" />
+            <source src="/assets/videos/Esperanza%20Loading%20Video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 

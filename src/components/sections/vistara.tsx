@@ -15,9 +15,9 @@ const Vistara = () => {
 
   const [currentMascotIndex, setCurrentMascotIndex] = useState(0);
   const mascotImages = [
-    "/mascot/mascot_normal_shadow.svg",
-    "/mascot/mascot_hi_shadow.svg",
-    "/mascot/mascot_party_shadow.svg"
+    "/assets/mascot/mascot_normal_shadow.svg",
+    "/assets/mascot/mascot_hi_shadow.svg",
+    "/assets/mascot/mascot_party_shadow.svg"
   ];
 
   useEffect(() => {

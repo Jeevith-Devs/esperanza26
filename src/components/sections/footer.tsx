@@ -165,12 +165,25 @@ const Footer = ({ onBackToTop }: { onBackToTop?: () => void }) => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
-            whileHover={{ y: -3, scale: 1.1, backgroundColor: "rgba(140, 0, 255, 0.7)" }}
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center justify-center p-4 md:p-5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white transition-all shadow-lg group"
+            whileHover={{ 
+                y: -8, 
+                scale: 1.15,
+                boxShadow: "0 0 25px rgba(255, 255, 255, 0.15)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 15 }}
+            className="group relative flex items-center justify-center p-4 md:p-5 rounded-full bg-white/5 backdrop-blur-md border border-white/20 text-white transition-all duration-500 shadow-2xl overflow-hidden"
             aria-label="Back to top"
           >
-            <span className="text-xl md:text-2xl group-hover:-translate-y-1 transition-transform duration-300">↑</span>
+            {/* Smooth Metallic Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-[#C0C0C0] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out" />
+            
+            {/* Subtle Inner Glow */}
+            <div className="absolute inset-0 border border-white/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <span className="relative z-10 text-xl md:text-2xl group-hover:-translate-y-1.5 group-hover:text-black transition-all duration-500 ease-out font-black italic">
+              ↑
+            </span>
           </motion.button>
         </motion.div>
 

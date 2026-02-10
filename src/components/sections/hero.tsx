@@ -30,8 +30,8 @@ const HeroSection: React.FC = () => {
     const dateNumbersRef = useRef<HTMLDivElement>(null);
 
     const videos = [
-        "/intro%20videos/intro1.mp4",
-        "/intro%20videos/intro2.mp4",
+        "/assets/intro%20videos/intro1.mp4",
+        "/assets/intro%20videos/intro2.mp4",
     ];
 
     useEffect(() => {

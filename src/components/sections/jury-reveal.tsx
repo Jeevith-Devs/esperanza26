@@ -8,9 +8,8 @@ import Image from 'next/image';
 const juryEvents = [
     { id: 1, title: "AnyBody Can Dance" },
     { id: 2, title: "Voice Guest" },
-    { id: 3, title: "Lens Legeacy" },
-    { id: 4, title: "Walk Of Fame" },
-    { id: 5, title: "Frame By Frame" },
+    { id: 3, title: "Walk Of Fame" },
+    { id: 4, title: "Frame By Frame" },
 ];
 
 const JuryReveal = () => {

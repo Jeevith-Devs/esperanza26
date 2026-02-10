@@ -31,19 +31,19 @@ const JuryReveal = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl md:text-6xl lg:text-7xl font-black font-bricolage tracking-widest uppercase mb-16 bg-gradient-to-b from-white via-[#C0C0C0] to-purple-500 bg-clip-text text-transparent mix-blend-screen drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+                    className="text-4xl md:text-6xl lg:text-7xl font-black font-bricolage tracking-widest uppercase mb-20 md:mb-24 bg-gradient-to-b from-white via-[#C0C0C0] to-purple-500 bg-clip-text text-transparent mix-blend-screen drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]"
                 >
                     Event Jury
                 </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 w-full px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 w-full max-w-6xl px-4 justify-items-center mx-auto">
                     {juryEvents.map((event, index) => (
                         <motion.div
                             key={event.id}
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-                            className="flex flex-col items-center gap-4 group"
+                            className="flex flex-col items-center gap-6 md:gap-8 group"
                         >
                             <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-2xl bg-white/5 border-2 border-white/10 flex items-center justify-center overflow-hidden backdrop-blur-sm group-hover:border-purple-500/50 transition-colors duration-300">
                                 <div className="absolute inset-0 bg-black/40 z-10" />

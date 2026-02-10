@@ -174,7 +174,7 @@ const Footer = ({ onBackToTop }: { onBackToTop?: () => void }) => {
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
-            className="group relative flex items-center justify-center p-4 md:p-5 rounded-full bg-white/5 backdrop-blur-md border border-white/20 text-white transition-all duration-500 shadow-2xl overflow-hidden"
+            className="group relative flex items-center justify-center p-4 rounded-full bg-white/5 backdrop-blur-md border border-white/20 text-white transition-all duration-500 shadow-2xl overflow-hidden"
             aria-label="Back to top"
           >
             {/* Smooth Metallic Gradient Overlay */}
@@ -183,9 +183,7 @@ const Footer = ({ onBackToTop }: { onBackToTop?: () => void }) => {
             {/* Subtle Inner Glow */}
             <div className="absolute inset-0 border border-white/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <span className="relative z-10 text-xl md:text-2xl group-hover:-translate-y-1.5 group-hover:text-black transition-all duration-500 ease-out font-black italic">
-              ↑
-            </span>
+            <ArrowUp className="relative z-10 w-6 h-6 group-hover:-translate-y-1 group-hover:text-black transition-all duration-500" />
           </motion.button>
         </motion.div>
 

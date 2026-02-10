@@ -8,7 +8,7 @@ import IntroTextSection from "@/components/sections/intro-text";
 import JuryReveal from "@/components/sections/jury-reveal";
 import TeaserVideo from "@/components/sections/teaser-video";
 import Vistara from "@/components/sections/vistara";
-import Sponsors from "@/components/sections/sponsors";
+// import Sponsors from "@/components/sections/sponsors";
 import FAQs from "@/components/faqs-3";
 import Footer from "@/components/sections/footer";
 import Loader from "@/components/ui/loader";
@@ -31,7 +31,7 @@ export default function Home() {
         <JuryReveal />
         <TeaserVideo />
         <Vistara />
-        <Sponsors />
+        {/* <Sponsors /> */}
         <FAQs />
         <Footer />
       </main>

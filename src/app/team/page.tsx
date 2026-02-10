@@ -45,6 +45,13 @@ const teamSections = {
         ]
       },
       {
+        category: "Dance Club Secretary",
+        members: [
+          { name: "Jervin J V" },
+          { name: "Srimathi S" },
+        ]
+      },
+      {
         category: "Music Club Secretary",
         members: [
           { name: "Sruthika K" },
@@ -52,10 +59,16 @@ const teamSections = {
         ]
       },
       {
-        category: "Dance Club Secretary",
+        category: "Comparing Club Secretary",
         members: [
-          { name: "Jervin J V" },
-          { name: "Srimathi S" },
+          { name: "Shivani A" },
+          { name: "Thilakavathy P" },
+        ]
+      },
+      {
+        category: "Media Club Secretary",
+        members: [
+          { name: "Sai Santhosh P" },
         ]
       },
       {
@@ -70,19 +83,6 @@ const teamSections = {
         members: [
           { name: "Silvya E" },
           { name: "Gracy" },
-        ]
-      },
-      {
-        category: "Media Club Secretary",
-        members: [
-          { name: "Sai Santhosh P" },
-        ]
-      },
-      {
-        category: "Comparing Club Secretary",
-        members: [
-          { name: "Shivani A" },
-          { name: "Thilakavathy P" },
         ]
       },
     ]
@@ -156,8 +156,8 @@ const teamSections = {
       {
         category: "Comparing Club",
         members: [
-          { name: "Thilakavathy P", role: "Secretary" },
           { name: "Shivani A", role: "Secretary" },
+          { name: "Thilakavathy P", role: "Secretary" },
           { name: "Meshach Sanderson C" },
           { name: "Alvin" },
           { name: "Mudhra" },
